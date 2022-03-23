@@ -1,1 +1,1 @@
-# javaOop
+# Object oriented programming in Java
