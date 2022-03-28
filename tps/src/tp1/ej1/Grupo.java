@@ -60,4 +60,22 @@ public class Grupo {
 		}
 		return integranteObtenido;
 	}
+	
+	public String removerIntegrante(String nombreIntegrante) {
+		int posARemover = obtenerPosicionIntegrante(nombreIntegrante);
+		String nombreRemovido = null;
+		if(posARemover>-1) {
+			integrantes.remove(posARemover);
+			nombreRemovido = nombreIntegrante;
+		}
+		return nombreRemovido;
+	}
+	public void mostrarIntegrantes() {
+		for(String integrante :integrantes) {
+			System.out.println(integrante);
+		}
+	}
+	public void vaciar() {
+		integrantes = new ArrayList<String>();
+	}
 }
