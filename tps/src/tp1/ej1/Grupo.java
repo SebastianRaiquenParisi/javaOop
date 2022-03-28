@@ -44,7 +44,7 @@ public class Grupo {
 	public int obtenerPosicionIntegrante(String nombreIntegrante) {
 		int pos = -1;
 		int i = 0;
-		while(i<=integrantes.size() && pos == -1) {
+		while(i<integrantes.size() && pos == -1) {
 			if(integrantes.get(i).equals(nombreIntegrante)) {
 				pos =i;
 			}
@@ -54,6 +54,10 @@ public class Grupo {
 	}
 	
 	public String obtenerIntegrante(int pos) {
-		return integrantes.get(pos);
+		String integranteObtenido = null;
+		if(pos < getCantidadIntegrantes()) {
+			integranteObtenido=integrantes.get(pos);
+		}
+		return integranteObtenido;
 	}
 }
